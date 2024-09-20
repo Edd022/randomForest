@@ -1,9 +1,10 @@
 import flet as ft
 
 def main (page: ft.Page):
+    #Método para darle acción al botón.
     def button_clicked(e):
-        t.value = (f"Los valores ingresados son: '{profundidad.value}','{tipoNPT}, '{tiempoIden.value},"
-                   f"'{solucion.value}', '{tiempoArr}")
+        t.value = (f"Los valores ingresados son: '{profundidad.value}','{tipoNPT.value}, '{tiempoIden.value},"
+                   f"'{solucion.value}', '{tiempoArr.value}")
         page.update()
     page.window.width = 500
     page.window.height = 500
@@ -14,13 +15,12 @@ def main (page: ft.Page):
     )
 
     def handle_changed(e):
-        tipoNPT.value = e
+        tipoNPT.value = e.data
         print (tipoNPT)
         print("on_change data: "+ str(e.data))
 
     tipoNPT = ft.TextField(
         value="",
-        read_only = True
     )
     page.add(profundidad,
         ft.SegmentedButton(
