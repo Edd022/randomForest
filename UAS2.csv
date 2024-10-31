@@ -1,0 +1,333 @@
+﻿#;PASO;Diámetro Hueco (in);OPERACIÓN;TIEMPO PLANEADO (hr);TIEMPO EJECUTADO (hr);GAP (hr)
+2;NPT;12.25;TIEMPO NO PRODUCTIVO OPERACIONAL;;3.00;3.00
+0;CA;12.25;Cambio de alcance;;;
+1;NP;49.00;Actividad no planeada, no se incluye tiempo en el DWOP o mapa de parametros;;100.00;100.00
+3;NPTNO;36.75;TIEMPO NO PRODUCTIVO NO OPERACIONAL (CLIMA, SOCIAL, LOCACIÓN);;31.50;31.50
+4;PUPIP11;17.50;Parar tuberia en el primer pozo;;;
+5;SAFE11;17.50;Realizar reunión pre operacional y de seguridad para iniciar operaciones de perforación;;1.00;1.00
+6;RUBHA11;17.50;Armar BHA convencional;;2.00;2.00
+7;RIOH11;17.50;Bajar y verificar fondo del conductor (+/- 45);;;
+8;DRIL11;17.50;Perforar con Broca Tricónica Formación Guayabo hasta 400' aproximadamente;;17.00;17.00
+9;POOH11;17.50;SACAR BHA N° 1 A SUPERFICIE PARA CAMBIO DE BHA;;2.00;2.00
+10;SAFE12;17.50;realizar reunión preoperacional y de seguridad para desarme y arme de BHA Direccional;;0.50;0.50
+11;RUBHA12;17.50;Desarmar BHA No 1. Armar bajar BHA N° 2;;2.50;2.50
+12;RIOH12;17.50;Bajar sarta a 400 ft;;1.00;1.00
+13;DRIL12;17.50;Perforar hueco de 17 1/2'' en Formación Guayabo desde 350 ft hasta 1000 ft;;13.00;13.00
+14;CRBHA11;17.50;CIRCULAR A HUECO LIMPIO @ 1000 FT;;1.00;1.00
+15;DRIL13;17.50;Perforar hueco de 17 1/2'' desde el Tope de la Unidad Areniscas superiores hasta Max 1915 ft;;16.00;16.00
+16;CRBHA12;17.50;Bombear píldora según programa de fluidos y circular fondos hasta retornos limpios (reciprocando sarta);;1.00;1.00
+17;SHTRI11;17.50;Viaje corto. Sacar sarta hasta 100 ft, asegurando repasar los conglomerados para evitar truncamiento del revestimiento;;3.00;3.00
+18;SHTRI12;17.50;Viaje corto. Bajar hasta 1000 ft;;;
+19;CRBHA13;17.50;Circular a limpio;;;
+20;SHTRI13;17.50;Viaje corto. Bajar hasta 1915 ft;;;
+21;CRBHA14;17.50;Circular a limpio;;1.00;1.00
+22;POOH12;17.50;SACAR SARTA A SUPERFICIE;;0.50;0.50
+23;SAFE13;17.50;Reunion de seguridad;;0.50;0.50
+24;RDBHA11;17.50;Quebrar BHA Direccional;;;
+26;RUCST11;17.50; Realizar Rig up de las herramientas de corrida de csg;;1.00;1.00
+25;SAFE14;17.50;Realizar reunión pre operacional  y HSE para Rig up de herramientas y corrida de csg 13 3/8;;0.50;0.50
+27;RIOHC11;17.50;"Bajar revestimiento de 13 3/8"" desde superficie, hasta 1000 FT md";;7.00;7.00
+28;CIRCS11;17.50;CIRCULAR A HUECO LIMPIO @ 1000 FT;;;
+29;RIOHC12;17.50;"Bajar revestimiento de 13 3/8"" desde superficie, hasta 1910 ft";;0.50;0.50
+30;SAFE15;17.50;Reunion de seguridad para armar herramientas de cementacion;;0.50;0.50
+31;RUCEM11;17.50;REALIZAR RIG UP DE HERRAMIENTAS PARA CEMENTACIÓN E INSTALAR CABEZA DE CIRCULACION;;2.00;2.00
+32;CIRCS12;17.50;Circular hasta retornos limpios con 400 gpm y acondicionar lodo para cementación de casing 13 3/8;;;
+33;SAFE16;17.50;Realizar reunión Pre-Operacional Cementación Casing 13 3/8;;;
+34;CIRCS13;17.50;Continuar circulando para acondicionar lodo para cementación de casing 13 3/8;;;
+35;CEM11;17.50;REALIZAR CEMENTACIÓN SEGÚN PROGRAMA;;3.50;3.50
+36;RDCEM11;17.50;REALIZAR RIG DOWN DE LA CABEZA Y LÍNEAS DE CEMENTACIÓN. DESARMAR LÍNEAS DE SUPERFICIE;;1.50;1.50
+37;RDCST11;17.50;Acondicionar mesa. Rig Down herramientas corrida de casing;;0.50;0.50
+38;CONDC11;17.50;LIMPIAR CONTRAPOZO;;;
+39;SAFE17;17.50;Realizar reunión preoperacional para Instalacion de  Wellhead convencional (sección A) de Fepco;;0.50;0.50
+40;RUBOP11;17.50;INSTALACIÓN Y PRUEBA DE WELLHEAD CONVENCIONAL (SECCIÓN A) DE FEPCO;;0.50;0.50
+41;SAFE18;17.50;Realizar reunion Preoperacional y de seguridad instalacion y prueba BOPs;;0.50;0.50
+42;RUBOP12;17.50;"INSTALAR SET DE BOP'S 13-5/8"". INSTALAR CAMPANA, TEMPLETES Y CAMISA FLOW LINE.";;2.00;2.00
+43;BOPT11;17.50;Asentar Test Plug. Probar set de BOP's;;2.00;2.00
+45;SIMUL11;17.50;Rig Service. Simulacros;;;
+44;IRWB11;17.50; Retirar Test Plug.  Instalar wear Bushing en Casing Head;;1.00;1.00
+46;PUPIP21;12.25;Parar tuberia en el primer pozo;;;
+47;SAFE21;12.25;Realizar reunión preoperacional para arme de BHA para perforar fase 12-1/4;;0.50;0.50
+48;RUBHA21;12.25; RIG UP: BHA Direccional. Probar herramientas direccionales;;3.00;3.00
+49;RICH21;12.25; Continuar armando y bajando BHA;;1.50;1.50
+50;CSTST21;12.25;" Si no se realizo prueba durante la cementacion del Rev 13 3/8"", Realizar prueba de Casing 13-3/8"" con 1500 psi por 30 minutos, antes de realizar el Drill Out";;;
+51;DRILO21;12.25;"Limpiar cemento, perforar tapones, collar, y 5' arriba del tope del zapato 13-3/8"". Realizar desplazamiento de agua-cemento por lodo para perforar la fase. Perforar zapato, bolsillo y 10' de formación";;3.50;3.50
+52;LOT21;12.25;Prueba de integridad del zapato de 13 3/8, Presion de prueba 300 psi;;1.00;1.00
+53;DRIL21;12.25;"Perforar fase 12-1/4"" Formación Areniscas Superiores hasta Tope Lutita E según plan direccional";;;
+54;DRIL22;12.25;"PERFORAR FASE 12-1/4"" FORMACION LUTITA E HASTA TOPE UNIDAD C1 SEGÚN PLAN DIRECCIONAL";;5.50;5.50
+55;DRIL23;12.25;"PERFORAR FASE 12-1/4"" FORMACION UNIDAD C1 HASTA TOPE ARENISCAS CARBONERA SEGÚN PLAN DIRECCIONAL";;9.50;9.50
+56;DRIL24;12.25;"PERFORAR FASE 12-1/4"" FORMACION ARENISCAS CARBONERA HASTA UNIDAD C2 SEGÚN PLAN DIRECCIONAL";;3.00;3.00
+57;CRBHA21;12.25;Circular un fondo arriba para descargar anular, bombear y dejar pildor LCM frente areniscas carbonera y presionar circulando en el tope.;;0.50;0.50
+58;DRIL25;12.25;"Perforar fase 12-1/4"" Unidad C2 hasta 5650 pies";;25.50;25.50
+59;CRBHA22;12.25;BOMBEAR PÍLDORAS SEGÚN PROGRAMA DE FLUIDOS Y CIRCULAR A LIMPIO;;1.50;1.50
+60;SHTRI21;12.25;"Sacar tubería hasta el zapato de 13 3/8"" . (HUECO ABIERTO";;8.00;8.00
+61;CRBHA23;12.25;"CIRCULAR EN EL ZAPATO DE 13-3/8"" (LAG TIME)";;;
+62;SHTRI22;12.25;Bajar  tubería hasta FONDO . (HUECO ABIERTO);;;
+63;DRIL26;12.25;"Perforar fase 12-1/4"" desde 5650 pies  según plan direccional hasta Tope LE3";;4.50;4.50
+64;DRIL27;12.25;"Perforar fase 12-1/4""  hasta Tope Unidad T1 según plan direccional";;13.00;13.00
+65;DRIL28;12.25;"Perforar fase 12-1/4""  desde tope de la Unidad T1 hasta tope de Unidad Lutita E4 según plan direccional";;4.50;4.50
+66;DRIL29;12.25;"Perforar fase 12-1/4""  desde tope de la Unidad Lutita E4 hasta 40' antes del tope de Unidad T2 según plan direccional";;13.50;13.50
+67;DRIL210;12.25;Perforar con rata controlada entre 20 a 5 pies/hora, 30 pies antes del tope de T2 en la Formación Lutita E4, ya que el pozo se va parar 10 pies antes de tocar el tope de San Fernando (T2) aproximadamente;;6.50;6.50
+68;CRBHA24;12.25; Circular hasta obtener retornos limpios en superficie;;0.50;0.50
+69;SHTRI23;12.25;Sacar tubería hasta hueco viejo +/- 5650 FT;;;
+70;CRBHA25;12.25;CIRCULAR HASTA OBTENER RETORNOS LIMPIOS EN SUPERFICIE;;1.00;1.00
+71;SHTRI24;12.25;Bajar libre  (HUECO ABIERTO);;0.50;0.50
+72;CRBHA26;12.25;CIRCULAR HASTA OBTENER RETORNOS LIMPIOS EN SUPERFICIE;;2.00;2.00
+73;POOH21;12.25;"SACAR TUBERÍA HASTA EL ZAPATO DE 13 3/8"" (HUECO ABIERTO)";;18.00;18.00
+74;CRBHA27;12.25;"CIRCULAR EN EL ZAPATO DE 13-3/8"" (LAG TIME)";;;
+75;POCH21;12.25;Sacar sarta hasta superficie.;;2.00;2.00
+76;SAFE22;12.25;Realizar reunión preoperacional quebrada BHA direccional;;0.50;0.50
+77;RDBHA21;12.25;Quebrar Herramientas Direccionales y Broca;;1.50;1.50
+78;RUBHA22;12.25;Armar BHA de acondicionaiento. Viaje de acondicionamiento a definir durante la operación en reunion entre Operaciones e Ingenieria;;3.00;3.00
+79;WIPER21;12.25;Bajar BHA en hueco revestido;;;
+80;CRBHA28;12.25;Circular en zapato de Rev 9 5/8;;1.00;1.00
+81;WIPER22;12.25;"Bajar BHA OH de 12 1/4""";;47.00;47.00
+82;CRBHA29;12.25;Circular en fondo a hueco limepio 350 GPM;;2.00;2.00
+83;WIPER23;12.25;"Sacar BHA OH de 12 1/4""";;12.00;12.00
+84;WIPER24;12.25;Sacar BHA en hueco revestido hasta superficie y quebrar herramientas;;4.00;4.00
+85;IRWB21;12.25;Bajar con un sencillo de DP y recuperar wear bushing;;0.50;0.50
+86;SAFE23;12.25;Realizar reunión pre operacional para corrida de casing 9 5/8;;0.50;0.50
+87;RUCST21;12.25;Realizar rig up de htas para corrida csg;;1.50;1.50
+88;RICHC21;12.25;"REALIZAR CORRIDA DE CASING 9 5/8"": (HUECO REVESTIDO)";;5.00;5.00
+89;RIOHC21;12.25;"Realizar corrida de casing 9 5/8"": (HUECO ABIERTO)";;18.50;18.50
+90;CIRCS21;12.25;Circular con rotación y 590 gpm, hasta completar 2 fondos arriba;;1.50;1.50
+91;RUCEM21;12.25; Desconectar CDS y Conectar cabeza de cementación;;1.00;1.00
+92;CEM21;12.25;Realizar cementación según programa aprobado;;2.50;2.50
+94;RDCEM21;12.25;Desarmar líneas y cabeza de cementación;;2.00;2.00
+93;CSTST22;12.25;Realizar prueba de revestimiento con 2500 psi por 30 minutos;;0.50;0.50
+95;TESCS21;12.25;Instalar seccion B y BOP;;;
+96;RDCST21;12.25;Realizar rig down herramientas para corrida de casing 9 5/8;;2.00;2.00
+97;BOPT21;12.25;Armar sarta de prueba y aentar Test Plug .  - Probar set de BOP's incluyendo pegue entre sección B y BOP's;;1.50;1.50
+98;IRWB22;12.25;INSTALAR WEAR BUSHING EN CASING HEAD;;0.50;0.50
+99;RSERV21;12.25;Tiempo de Rig Service, Corrida y corte de cable;;2.50;2.50
+100;SIMUL21;12.25;TIEMPO DE SIMULACROS;;;
+101;SAFE31;8.50;Reunión pre operacional y de seguridad para armar BHA direccional para fase 8 1/2;;0.50;0.50
+102;RUBHA31;8.50;Realizar RIG UP  herramientas direccionales y BHA (Motor + MWD + LWD);;4.50;4.50
+103;RICH31;8.50;BAJAR LIBRE HASTA 400 PIES ANTES DEL TOPE TEÓRICO DEL CEMENTO, LUEGO BAJAR LAVANDO POR SEGURIDAD HASTA ENCONTRAR TOPE DE CEMENTO;;6.00;6.00
+104;DRILO31;8.50;"Si no fue posible realizar la prueba de revestimienro al final de la cementacion, se debe realizar prueba de integridad de casing 9 5/8"" con 1000 PSI";;;
+105;CSTST31;8.50;Limpiar cemento, perforar tapones, collar, y 5' arriba del tope del zapato 9-5/8;;;
+106;DRIL31;8.50;"Perforar el zapato 9-5/8"" + 5' de bolsillo + 10' de formación";;2.00;2.00
+107;CSTST32;8.50;Asegurar pozo estable(integridad en el zapato);;;
+108;DRIL32;8.50;"Perforar fase 8-1/2"" desde el Tope de Unidad T2 hasta tope de K1 Superior según plan direccional";;2.00;2.00
+109;DRIL33;8.50;"PERFORAR FASE 8-1/2"" DESDE TOPE K1 SUPERIOR  HASTA TOPE K1 INFERIOR SEGÚN PLAN DIRECCIONAL";;9.00;9.00
+110;DRIL34;8.50;"PERFORAR FASE 8-1/2"" DESDE TOPE K1 INFERIOR  HASTA TOPE DE MASIVO K2 SEGÚN PLAN DIRECCIONAL";;10.50;10.50
+111;DRIL35;8.50;"Perforar fase 8-1/2"" desde tope Masivo K2 hasta TD según plan direcciona";;40.50;40.50
+112;CRBHA31;8.50;CIRCULAR HASTA OBTENER RETORNOS LIMPIOS EN SUPERFICIE;;2.50;2.50
+113;SHTRI31;8.50;"Sacar tubería hasta el zapato de 9 5/8"" (HUECO ABIERTO)";;2.50;2.50
+114;CRBHA32;8.50;Circular en el zapato de 9-5/8;;1.50;1.50
+115;SHTRI32;8.50;Bajar libre (HUECO ABIERTO);;2.50;2.50
+116;CRBHA33;8.50; Circular hasta obtener retornos limpios;;2.50;2.50
+117;POOH31;8.50;"Sacar tubería hasta el zapato de 9 5/8"" (HUECO ABIERTO)";;2.50;2.50
+118;CRBHA34;8.50;Circular en el zapato de 9-5/8;;1.00;1.00
+119;POCH31;8.50;"CONTINUAR SACANDO DP 5 1/2"" Y  BHA HASTA SUPERFICIE. (HUECO REVESTIDO)";;7.00;7.00
+120;SAFE32;8.50;Realizar reunion Preoperacional quiebre de BHA Direccional;;0.50;0.50
+121;RDBHA31;8.50;Quebrar herramientas direccionales.;;1.00;1.00
+122;SAFE33;8.50;Realizar reunión preoperacional y de seguridad para operación de registros eléctricos Triple Combo con cable;;0.50;0.50
+123;RULOG31;8.50;Armar poleas y herramientas de regsitro con cable;;3.50;3.50
+124;RULOG32;8.50;Armar sonda triple combo;;;
+125;RIHLG31;8.50;Bajar sonda TC con cable hasta zapato 9 5/8;;2.00;2.00
+126;RUNWL31;8.50;Realizar toma de registros TC;;1.00;1.00
+127;POHLG31;8.50;Sacar sonda a superficie;;1.00;1.00
+128;RULOG33;8.50;Armar sonda para toma de puntos de presion;;2.00;2.00
+129;RIHLG32;8.50;Conectar y bajar sonda puntos de presion hasta zapato 9 5/8;;1.50;1.50
+130;PLOG31;8.50;Realizar toma de puntos de presion;;5.50;5.50
+131;POHLG32;8.50;Sacar sonda a superficie;;1.00;1.00
+132;SAFE34;8.50;REALIZAR REUNIÓN PREOPERACIONAL Y DE SEGURIDAD PARA ARME DE BHA CONVENCIONAL;;;
+133;RUBHA32;8.50; Armar BHA convencional para acondicionar hueco de 8-1/2;;;
+134;WIPER31;8.50;"Bajar DP 5 1/2"", libre hasta zapato de 9-5/8";;;
+135;CRBHA35;8.50;Circular en el zapato de 9-5/8;;;
+136;WIPER32;8.50;"Bajar BHA en hueco abierto de 8-1/2"" hasta el fondo";;;
+137;CRBHA36;8.50;CIRCULAR HASTA OBTENER RETORNOS LIMPIOS EN SUPERFICIE;;;
+139;CRBHA37;8.50;Circular en el zapato de 9-5/8;;;
+138;WIPER33;8.50;Sacar BHA de acondicionamiento hasta el zapato de 9-5/8;;;
+140;WIPER34;8.50;"Continuar sacando DP 5 1/2"". Quebrar BHA";;;
+141;SAFE35;8.50;Realizar reunión preoperacional para corrida de Liner 7;;0.50;0.50
+142;RUCST31;8.50;Rig up de htas para bajar liner 7;;1.00;1.00
+143;RICHL31;8.50;"Bajar liner  7"", según programa. (HUECO REVESTIDO)";;3.00;3.00
+144;RULNR31;8.50;Levantar y armar Liner Hanger Assembly - Setting Tool  Conectar Hanger al Liner 7;;1.50;1.50
+145;RDCST31;8.50;Rig Down herramientas de manejo para corrida de Liner 7;;;
+146;RICHL32;8.50;"Continuar bajando liner 7""  (HUECO REVESTIDO)";;6.50;6.50
+147;CIRCS31;8.50;"CIRCULAR UN FONDO ARRIBA EN EL ZAPATO 9-5/8""";;1.50;1.50
+148;RIOHL31;8.50;" Bajar Liner 7"" (HUECO ABIERTO)";;3.00;3.00
+149;CIRCS32;8.50;Circular fondos hasta retornos limpios y presión estable acorde a la simulación enviada previo a la corrida;;2.00;2.00
+150;RUCEM31;8.50;Levantar y conectar cabeza de cementación;;1.50;1.50
+151;CIRCS33;8.50;Continuar circulando Liner;;4.00;4.00
+152;CEM31;8.50;Cementar liner 7;;2.00;2.00
+153;SETLN31;8.50;Realizar expansión del top packer  según procedimiento de compañía aliada;;1.00;1.00
+154;RDCEM31;8.50;Rig Down líneas de cementación;;;
+155;CIRCS34;8.50;DESPLAZAR LODO POR AGUA FILTRADA;;;
+156;LDPIP31;8.50;SACAR Y QUEBRAR SETTING TOOL;;5.50;5.50
+157;SIMUL31;8.50;TIEMPO DE SIMULACROS;;;
+158;RSERV31;8.50;Rig Service;;1.00;1.00
+0;CA;;Cambio de alcance;0.00;;
+1;NP;;ACTIVIDAD NO PLANEADA, NO SE INCLUYE EL TIEMPO EN EL DWOP O MAPA DE PARÁMETROS;0.00;;
+2;NPT;;Tiempo no productivo operacional.;0.00;;
+3;NPTNO;;TIEMPO NO PRODUCTIVO NO OPERACIONAL (CLIMA, SOCIAL, LOCACIÓN);0.00;;
+4;RMRIG;;Reparacion Mantenimiento de Taladro;0.00;;
+5;RS;;Rig Service;0.00;;
+6;SIMUL;;Simulacro;0.00;;
+7;MANT;;Preventive Maintenance;0.00;;
+8;SLCUT;;Correr-Cortar Cable;0.00;1.50;1.50
+9;SAFE11;12.25;Realizar reunión pre operacional y de seguridad para iniciar operaciones de perforación.;0.50;0.50;0.00
+10;RUBHA11;12.25;Armar BHA convencional,  Bajar y verificar fondo del conductor (+/- 45);0.50;0.50;0.00
+11;DRIL11;12.25;Perforar con Broca Tricónica Formación Guayabo hasta 400 ft aproximadamente o hasta que el porcentaje de conglomerado sea inferior a 10%;9.00;12.00;3.00
+12;CRBHA11;12.25;Circular BHA hasta fondos limpios;0.50;0.50;0.00
+14;SAFE12;12.25;REALIZAR REUNIÓN PREOPERACIONAL Y DE SEGURIDAD PARA ARME DE BHA DIRECCIONAL.;0.50;0.50;0.00
+13;POOH11;12.25;Sacar BHA No 1 a superficie para cambio de BHA;1.00;1.00;0.00
+15;RUDT11;12.25;Armar BHA No 2. Probar herramientas direccionales;2.50;3.50;1.00
+16;RIOH11;12.25;Bajar BHA direccional hasta 400 ft;1.50;2.50;1.00
+17;DRIL12;12.25;Perforar hueco de 12 1/4 in desde 400 ft hasta  el tope de la Formación Carbonera Unidad Areniscas superiores. Formación Guayabo;15.00;10.50;-4.50
+18;DRIL13;12.25;Perforar hueco de 12 1/4 in desde el Tope de la Unidad Areniscas superiores hasta Max 2100 ft.;9.00;5.50;-3.50
+19;CRBHA12;12.25;Bombear píldora y circular hasta retornos limpios (reciprocando sarta).;1.00;1.00;0.00
+20;WIPER11;12.25;Sacar tubería hasta superficie, sin quebrar el BHA;4.00;2.50;-1.50
+21;WIPER12;12.25;Limpiar BHA en superficie;0.50;;
+23;CRBHA13;12.25;Circular hasta retornos limpios (reciprocando sarta).;1.50;1.50;0.00
+22;WIPER13;12.25;Bajar libre. Bajar lavando las tres ultimas paradas hasta profundidad perforada por seguridad.;3.00;3.00;0.00
+24;POOH12;12.25;SACAR SARTA A SUPERFICIE.;2.50;2.50;0.00
+25;SAFE13;12.25;Realizar reunión preoperacional y de seguridad para quebrar herramientas direccionales;0.50;0.50;0.00
+26;RDDT11;12.25;QUEBRAR BHA DIRECCIONAL.;2.00;1.50;-0.50
+28;RDEQR12;12.25;Desinstalar riser de 20 in;1.00;0.50;-0.50
+27;RDEQR11;12.25;Acondicionar mesa;0.50;0.50;0.00
+29;SAFE14;12.25;Realizar reunión pre operacional  y HSE para Rig up de herramientas de corrida de csg 9 5/8 in;0.50;0.50;0.00
+30;RUCST11;12.25;Realizar Rig up de las herramientas de corrida de csg.;1.50;1.50;0.00
+31;SAFE15;12.25;Realizar reunión pre operacional  y HSE para corrida de csg 9 5/8 in;0.50;0.50;0.00
+32;RIOHC11;12.25;Correr CSG 9 5/8 in;5.00;5.00;0.00
+33;RIOHC12;12.25;Torquear G-Mandrel a última junta de revestimiento. Correr y fijar G-Mandrel en tubo conductor.;1.50;1.50;0.00
+34;RUCEM11;12.25;REALIZAR RIG UP DE HERRAMIENTAS PARA CEMENTACIÓN E INSTALAR CABEZA DE CIRCULACION.;0.50;;
+35;CIRCS11;12.25;Circular hasta retornos limpios con mínimo caudal de 350-400 gpm y acondicionar lodo para cementación de casing 9-5/8 in.;2.00;0.50;-1.50
+36;RUCEM12;12.25;Realizar rig up de líneas de cementación. Probar líneas con 500 y 2700 psi por 5 min.;0.50;;
+37;SAFE16;12.25;Realizar reunión Pre-Operacional Cementación Casing 9 5/8 in;0.50;0.50;0.00
+38;CEM11;12.25;REALIZAR CEMENTACIÓN SEGÚN PROGRAMA.;1.50;1.50;0.00
+39;CSTST11;12.25;Realizar prueba de Casing 9-5/8 in con asentamiento del tapón con 1500 psi por 30 minutos;0.50;0.50;0.00
+40;RDCEM11;12.25;Realizar Rig Down de la cabeza y líneas de cementación;1.00;1.00;0.00
+41;RDCST11;12.25;Retirar landing joint y running tool 9 5/8 in;0.50;0.50;0.00
+43;RDCST12;12.25;RIG DOWN HERRAMIENTAS CORRIDA DE CASING.;1.50;1.50;0.00
+44;CONDC11;12.25;LIMPIAR CONTRAPOZO;2.00;1.00;-1.00
+45;SAFE18;12.25;Realizar reunión preoperacional para Instalacion de Wellhead compacto (Sección A + Sección B);0.50;0.50;0.00
+46;TESCS11;12.25;Instalación y prueba de Wellhead compacto MB2 (Sección A + Sección B). Realizar prueba hidrostática de sellos Sección A;2.00;1.50;-0.50
+47;SAFE19;12.25;Realizar reunion Preoperacional y de seguridad instalación y prueba BOPs;0.50;0.50;0.00
+48;RUBOP11;12.25;Instalar set de BOPs 13 5/8x10K sobre Sección B del MB2. Instalar campana, templetes y camisa flow line;4.50;3.50;-1.00
+42;SAFE17;12.25;Realizar reunión preoperacional para rig down de herramientas de manejo de CSG 9.625;0.50;0.50;0.00
+50;IRWB11;12.25;Instalar wear Bushing largo.;0.50;0.50;0.00
+49;BOPT11;12.25;Probar pegue de set de BOPs con well head;1.50;1.50;0.00
+51;RS11;12.25;Rig Service;0.50;;
+52;RUEQR21;8.75;Cambiar Saver sub 6 5/8 REG x XT54 por saver sub de 6 5/8 REG x Delta 425 para manejo de tubería de 4 1/2 in;0.50;;
+53;SAFE21;8.75;Realizar reunión preoperacional y de seguridad para parar tubería 4 1/2 in Delta 425;0.50;0.50;0.00
+54;PUPIP21;8.75;Parar aprox 3500 ft de DP 4 1/2 in Delta 425;6.00;7.00;1.00
+55;SAFE22;8.75;Realizar reunión preoperacional para arme de BHA para perforar fase 8-3/4 in;0.50;0.50;0.00
+56;RUDT21;8.75;RIG UP BHA Direccional. Probar herramientas direccionales.;3.00;3.00;0.00
+57;RICH21;8.75;Continuar armando y bajando BHA (Según Programa de Perforación/Direccional). Bajar libre hasta arriba del tope teórico de cemento. Bajar lavando hasta tope del cemento.;3.50;4.50;1.00
+58;DRILO21;8.75;Limpiar cemento, perforar tapones, collar, y 5 ft arriba del tope del zapato 9-5/8 in. Realizar desplazamiento de agua-cemento por lodo para perforar la fase. Perforar zapato, bolsillo y 10 ft de formación;2.50;2.00;-0.50
+59;SAFE23;8.75;Realizar reunión preoperacional y de seguridad para instalar líneas chicksan y realizar prueba de integridad del zapato de 9 5/8 in + FIT;0.50;0.50;0.00
+60;LOT21;8.75;Conectar líneas Chicksan desde la unidad de cementación a side entry sub de la junta en cuñas. Realizar prueba de integridad del zapato de 9 5/8 in + FIT;1.00;1.50;0.50
+61;RDEQU21;8.75;Realizar rig down de líneas chicksan;0.50;0.50;0.00
+62;INFT21;8.75;Realizar check flow por 30 min;0.50;0.50;0.00
+63;DRIL21;8.75;Perforar fase 8-3/4 in Formación Areniscas Superiores hasta Tope Lutita E según plan direccional.;1.50;1.50;0.00
+64;DRIL22;8.75;Perforar fase 8-3/4 in Formacion Lutita E hasta Tope Unidad C1 según plan direccional;8.50;8.00;-0.50
+65;DRIL23;8.75;Perforar fase 8-3/4 in Formacion Unidad C1 hasta Tope Areniscas Carbonera según plan direccional;4.50;4.50;0.00
+66;DRIL24;8.75;Perforar fase 8-3/4 in Formacion Areniscas Carbonera hasta Unidad C2 según plan direccional;3.50;5.00;1.50
+67;CRBHA21;8.75;Circular hasta limpios con mismos parámetros de perforación de la Unidad.;1.50;1.00;-0.50
+68;SHTRI21;8.75;Sacar sarta hasta el tope de la Unidad Areniscas de Carbonera para calibrar hueco previo al sellamiento.;1.00;0.50;-0.50
+69;SHTRI22;8.75;Bajar sarta en hueco abierto hasta la base de la Unidad Areniscas de Carbonera.;0.50;0.50;0.00
+70;CRBHA22;8.75;Bombear y dejar en fondo píldora sellante para reforzar Unidad Areniscas de Carbonera;0.50;0.50;0.00
+71;POOH21;8.75;Sacar sarta hasta tope de la Unidad Areniscas de Carbonera.;0.50;0.50;0.00
+72;CRBHA23;8.75;Circular pozo con caudal de perforación, realizando reforzamiento de la Unidad Areniscas de carbonera con ECD;0.50;;
+73;RIOH21;8.75;Bajar sarta, lavando píldora hasta la base de la Unidad Areniscas de carbonera, para continuar perforación;0.50;0.50;0.00
+74;DRIL25;8.75;Perforar fase 8-3/4 in Unidad C2 hasta 6100 Pies;27.00;41.00;14.00
+75;CRBHA24;8.75;BOMBEAR PÍLDORAS SEGÚN PROGRAMA DE FLUIDOS Y CIRCULAR A LIMPIO;2.00;1.50;-0.50
+76;SHTRI23;8.75;Sacar tubería hasta el zapato de 9 5/8. (HUECO ABIERTO);6.50;20.00;13.50
+77;CRBHA25;8.75;Circular en el zapato de 9-5/8 (Lag Time);1.00;1.00;0.00
+78;SHTRI24;8.75;Bajar libre. Bajar lavando las tres ultimas paradas hasta profundidad perforada por seguridad;5.50;4.50;-1.00
+79;CRBHA26;8.75;Circular pozo hasta retornos limpios en superficie;1.50;1.50;0.00
+80;DRIL26;8.75;Perforar fase 8-3/4 desde 6100' al tope de Lutita E3  según plan direccional;4.50;2.50;-2.00
+81;DRIL27;8.75;Perforar fase 8-3/4 desde Tope de Lutita E3  hasta Tope Unidad T1 según plan direccional;8.00;12.50;4.50
+82;DRIL28;8.75;Perforar fase 8-3/4 desde tope de la Unidad T1 hasta tope de Unidad Lutita E4 según plan direccional;5.50;6.00;0.50
+84;SHTRI25;8.75;Sacar sarta hasta el tope de la Unidad T1 para calibrar hueco previo al reforzamiento.;0.50;0.50;0.00
+83;CRBHA27;8.75;Circular hasta limpios con mismos parámetros de perforación de la Unidad;1.00;1.00;0.00
+85;SHTRI26;8.75;Bajar sarta hasta tope de la Unidad Lutita E4;0.50;0.50;0.00
+86;CRBHA28;8.75;Bombear y desplazar píldora sellante para reforzar la Unidad T1;0.50;1.00;0.50
+87;POOH22;8.75;Sacar sarta hasta tope de la Unidad T1. Verificar que el punto de circulación sea competente para hacer reforzamiento con ECD.;0.50;0.50;0.00
+91;DRIL210;8.75;Realizar control de ROP 60 pies MD antes del tope de T2 por prognosis. Parar 10 pies en MD antes de entrar al tope de T2;8.00;4.00;-4.00
+90;DRIL29;8.75;Perforar fase 8-3/4  desde tope de la Unidad Lutita E4 hasta 60 ft antes del tope de Unidad T2 según plan direccional.;14.00;8.00;-6.00
+88;CRBHA29;8.75;Circular pozo con caudal de perforación, realizando reforzamiento de la Unidad T1 con ECD;0.50;0.50;0.00
+89;RIOH22;8.75;Bajar sarta, lavando pildora hasta la base de la Unidad T1, para continuar perforación;0.50;0.50;0.00
+92;CRBHA210;8.75;Bombear píldoras de limpieza de acuerdo al programa de fluidos. Circular hasta obtener retornos limpios en superficie.;2.00;2.00;0.00
+93;SHTRI27;8.75;Sacar tubería hasta hueco viejo.;3.50;2.00;-1.50
+94;SHTRI28;8.75;Bajar sarta y repasar los intervalos que evidencien alta tortuosidad.;2.00;1.50;-0.50
+95;CRBHA211;8.75;Bombear píldoras de limpieza de acuerdo al programa de fluidos. Circular hasta obtener retornos limpios en superficie. Bombear Píldora lubricante (químico + mecánico) para corrida de CSG 7;2.00;2.00;0.00
+96;POOH23;8.75;Sacar tubería hasta el zapato de 9-5/8 (HUECO ABIERTO);8.00;7.00;-1.00
+100;RDDT21;8.75;Quebrar herramientas direccionales y broca.;2.00;1.00;-1.00
+101;IRWB21;8.75;Bajar con un sencillo de DP y recuperar wear bushing largo.;0.50;0.50;0.00
+102;RDEQR21;8.75;Acondicionar mesa previo a la corrida del  CSG 7 in;0.50;;
+103;SAFE25;8.75;Realizar reunión pre operacional para armar herramientas de manejo de casing 7 in;0.50;0.50;0.00
+104;RUCST21;8.75;REALIZAR RIG UP DE HTAS PARA CORRIDA CSG.;1.50;2.00;0.50
+105;SAFE26;8.75;Realizar reunión pre operacional para correr casing 7 in;0.50;0.50;0.00
+106;RICHC21;8.75;Realizar corrida de casing 7 en sección revestida;5.00;3.50;-1.50
+107;CIRCS21;8.75;CIRCULAR HASTA RETORNOS LIMPIOS;0.50;0.50;0.00
+97;CRBHA212;8.75;Circular en el zapato de 9-5/8 (Lag Time);0.50;0.50;0.00
+98;POCH21;8.75;Sacar sarta hasta el tope de las herramientas direccionales.;2.50;2.00;-0.50
+99;SAFE24;8.75;Realizar reunión preoperacional quebrada BHA direccional;0.50;0.50;0.00
+108;RIOHC21;8.75;Realizar corrida de casing 7 en hueco abierto;13.00;12.50;-0.50
+109;CIRCS22;8.75;Circular con rotación y 300-350 gpm hasta completar 2 fondos arriba.;1.50;1.50;0.00
+110;RIOHC22;8.75;Conectar y bajar Mandrel hanger  + 7 in setting tool + 7 in landing joint;0.50;0.50;0.00
+111;CIRCS23;8.75;Circular con rotación y 300 gpm hasta completar 2 fondos arriba. Bombear y dejar en fondo píldora lubricante.;1.00;1.00;0.00
+112;SAFE27;8.75;Realizar reunión preoperacional y de seguridad para armar cabeza y líneas de cementación.;0.50;;
+113;RUCEM21;8.75;Conectó cabeza de cementación;0.50;0.50;0.00
+114;CIRCS24;8.75;Circular mientras realiza premezcla de cemento;0.50;;
+115;RUCEM22;8.75;Conectar y probar líneas de cementación;0.50;0.50;0.00
+116;SAFE28;8.75;Realizó reunión preoperacional y de seguridad para cementar CSG 7;0.50;0.50;0.00
+117;CEM21;8.75;Cementar CSG 7;3.00;3.00;0.00
+118;RDCEM21;8.75;Desarmar líneas y cabeza de cementación;1.00;1.00;0.00
+119;RDCST21;8.75;Retirar landing joint + setting tool;0.50;0.50;0.00
+120;RDCST22;8.75;Realizar rig down herramientas para corrida de casing 7;1.00;1.00;0.00
+121;RUEQR22;8.75;Instalar brazos al top drive y elevador de tubería;1.00;1.00;0.00
+122;SAFE29;8.75;Realizó reunión preoperacional y de seguridad para instalar y probar bushing backoff por parte de Fepco;0.50;;
+123;TESCS21;8.75;Instalar Bushing pack off y probar con máximo 4000 psi x 10 minutos.;1.50;1.00;-0.50
+124;IRWB22;8.75;Armar sarta con test plug. Instalar wear Bushing corto. Quebrar sarta con test plug.;1.00;1.00;0.00
+125;RS21;8.75;Rig Service;5.00;;
+126;SAFE31;6.13;Realizar reunión pre operacional y de seguridad para armar BHA direccional para fase 6 1/8;0.50;0.50;0.00
+127;RUDT31;6.13;Realizar RIG UP  herramientas direccionales y BHA (Motor + LWD (Triple combo) + MWD).;4.50;4.50;0.00
+128;RICH31;6.13;Bajar libre hasta 400 pies antes del tope teórico del cemento, luego bajar lavando por seguridad hasta encontrar tope de cemento. Bajar tubo a tubo DP 3 1/2 in y DP 4 1/2 in;6.00;13.00;7.00
+129;CSTST31;6.13;Realizar prueba de integridad del revestimiento de 7 in con cemento fraguado con 1800 psi por 30 min.;0.50;0.50;0.00
+130;DRILO31;6.13;Limpiar cemento, perforar tapones, collar, y 5 ft arriba del tope del zapato 7;2.50;5.00;2.50
+131;DRILO32;6.13;Perforar el zapato 7 in + 5 ft de bolsillo + 10 ft de formación;0.50;0.50;0.00
+132;DESPL31;6.13;Una vez perforados los 10 ft de formación, circular a limpio. Desplazar lodo contaminado con cemento por lodo nuevo;0.50;;
+133;INFT31;6.13;Sacar dentro del casing y chequear flujo durante 30 min. Asegurar pozo estable (integridad en el zapato).;0.50;0.50;0.00
+134;DRIL31;6.13;Perforar registrando fase 6-1/8 desde el Tope de Unidad T2 hasta tope de K1 Superior según plan direccional;1.50;4.50;3.00
+135;DRIL32;6.13;Perforar registrando fase 6-1/8 desde tope K1 Superior  hasta Tope K1 Inferior según plan direccional;4.00;8.50;4.50
+136;DRIL33;6.13;Perforar registrando fase 6-1/8 desde tope K1 Inferior  hasta tope de Masivo K2 según plan direccional;6.00;6.50;0.50
+137;DRIL34;6.13;Perforar registrando fase 6-1/8 desde tope Masivo K2 hasta Tope de la Unidad K2-30 según plan direccional;13.50;16.00;2.50
+138;DRIL35;6.13;Perforar registrando fase 6-1/8 desde tope de la Unidad K2-30 hasta TD según plan direccional;17.00;12.50;-4.50
+139;CRBHA31;6.13;Bombear píldoras de limpieza de acuerdo con el programa de fluidos. Circular hasta obtener retornos limpios en superficie.;1.50;2.00;0.50
+140;SHTRI31;6.13;Realizar viaje corto de calibración hasta el zapato de 7 in;2.00;2.00;0.00
+141;CRBHA32;6.13;Circular en el zapato de 7 in;0.50;1.00;0.50
+142;SHTRI32;6.13;Bajar libre. Bajar lavando las tres ultimas paradas hasta profundidad perforada por seguridad. (HUECO ABIERTO);1.50;3.00;1.50
+143;CRBHA33;6.13;Bombear píldoras de limpieza de acuerdo al programa de fluidos. Circular hasta obtener retornos limpios en superficie.;1.50;2.50;1.00
+144;POOH31;6.13;Sacar tubería hasta el zapato de 7 (HUECO ABIERTO);1.50;1.50;0.00
+145;CRBHA34;6.13;Circular en el zapato de 7 in;0.50;0.50;0.00
+147;SAFE32;6.13;Realizar reunion preoperacional para quiebre de BHA direccional;0.50;0.50;0.00
+146;POCH31;6.13;Continuar sacando DP 4 y  BHA hasta superficie. (HUECO REVESTIDO);6.00;7.50;1.50
+148;RDDT31;6.13;Quebrar herramientas direccionales.;2.00;3.00;1.00
+149;RUEQR31;6.13;Acondicionar mesa para operación de corrida de liner 5 in;0.50;0.50;0.00
+150;SAFE33;6.13;Realizar reunión preoperacional para arme de herramientas de manejo de Liner 5 in.;0.50;0.50;0.00
+151;RUCST31;6.13;Rig up de htas de manejo de liner 5;1.00;1.50;0.50
+152;SAFE34;6.13;Realizar reunión preoperacional para correr Liner 5;0.50;0.50;0.00
+153;RICHL31;6.13;Correr liner 5 en sección revestida;5.00;5.00;0.00
+154;SAFE35;6.13;Realizar reunión preoperacional y de seguridad para conectar liner hanger Hi torque;0.50;0.50;0.00
+155;RULNR31;6.13;Levantar y conectar Liner Hanger Assembly - Setting Tool.;1.00;1.00;0.00
+156;RDCST31;6.13;Rig Down herramientas de manejo para corrida de Liner 5. Cambiar elevador;1.00;1.00;0.00
+157;RICHL32;6.13;Continuar bajando liner 5 con DP hasta zapato 7;9.50;9.50;0.00
+158;CIRCS31;6.13;Circular un fondo arriba en el zapato 7 in. Tomar parámetros;1.50;1.50;0.00
+159;RIOHL31;6.13;Bajar Liner 5 in en hueco abierto;2.50;3.50;1.00
+160;CIRCS32;6.13;Circular fondos hasta retornos limpios y presión estable acorde a la simulación enviada previo a la corrida.;2.00;3.00;1.00
+161;RUCEM31;6.13;Levantar y conectar cabeza de cementación;1.00;1.00;0.00
+162;SAFE36;6.13;Realizar reunión preoperacional para cementar y asentar el colgador.;0.50;0.50;0.00
+163;RUCEM32;6.13;Instalar líneas de cementación y probar con 550, 3400 y 9000 psi;1.50;1.50;0.00
+164;CEM31;6.13;Cementar liner 5 in, según programa;1.50;1.50;0.00
+165;SETLN31;6.13;Realizar colgamiento del liner y expansión del top packer  según procedimiento de compañía aliada.;0.50;0.50;0.00
+166;RDCEM31;6.13;Rig Down líneas y cabeza de cementación;1.00;2.50;1.50
+167;DESPL32;6.13;Desplazar lodo por agua aditivada;2.00;1.50;-0.50
+168;CSTST32;6.13;Probar integridad del Top packer con 3200 psi por 30 min;0.50;1.00;0.50
+169;INFT32;6.13;Realizar check flow por 30 min;0.50;0.50;0.00
+170;POOWS31;6.13;Sacar tubería y quebrar setting tool;7.00;13.50;6.50
+171;IRWB31;6.13;Recuperar wear bushing corto;0.50;1.00;0.50
+172;RS31;6.13;Rig Service;3.50;0.50;-3.00
