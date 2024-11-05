@@ -1,15 +1,16 @@
-#vista para mostrar los resultados: r^2, MAE, RMSE, Tiempo estimado
 import flet as ft
+from forest import RandomForestModel  # Importa la clase que creaste
 
-
+# Cargar el modelo (puedes hacerlo en el inicio de la aplicación para que esté listo cuando el usuario haga clic)
+modelo_rf = RandomForestModel("UAS_COMPLETO.csv")  # Ruta de tu archivo CSV
 def main(page: ft.Page):
     # Configuración de la página
     page.title = "Random Forest"
     page.window.width = 500
     page.window.height = 500
 
-    # Texto para mostrar el resultado
-    t = ft.Text()
+    # Texto para mostrar el resultado en la sección de "Solución"
+    solucion_text = ft.Text(value="Esta es la vista de Solución. Aquí se mostrarán los resultados.")
 
     # Definir campos de entrada para la vista de "Ingresar Datos"
     profundidad = ft.TextField(label="Ingrese el diámetro del hueco (in)", value="")
@@ -19,16 +20,15 @@ def main(page: ft.Page):
     tiempoArr = ft.TextField(label="Ingrese el tiempo ejecutado (hr)", value="")
 
     # Botón para procesar los datos
-    b = ft.ElevatedButton(text="Ingresar datos",
-                          on_click=lambda e: button_clicked(e, t, profundidad, tipoNPT, solucion, tiempoIden,
-                                                            tiempoArr))
+    b = ft.ElevatedButton(
+        text="Ingresar datos",
+        on_click=lambda e: button_clicked(e, solucion_text, profundidad, tipoNPT, solucion, tiempoIden, tiempoArr)
+    )
 
     # Contenedor para la vista de "Ingresar Datos"
-    ingresar_datos_view = ft.Column([profundidad, tipoNPT, solucion, tiempoIden, tiempoArr, b, t])
+    ingresar_datos_view = ft.Column([profundidad, tipoNPT, solucion, tiempoIden, tiempoArr, b])
 
-    # Contenedor para la vista de "Solución" (puedes agregar contenido específico aquí)
-    solucion_text = ft.Text(value="Esta es la vista de Solución. Aquí se mostrarán los resultados.")
-    #Aquí se deben poner los resultados pai
+    # Contenedor para la vista de "Solución"
     solucion_view = ft.Column([solucion_text])
 
     # Crear contenedor para las vistas y establecer la vista predeterminada
@@ -53,27 +53,41 @@ def main(page: ft.Page):
     )
 
     # Función de procesamiento de datos
-    def button_clicked(e, t, profundidad, tipoNPT, solucion, tiempoIden, tiempoArr):
+    def button_clicked(e, solucion_text, profundidad, tipoNPT, solucion, tiempoIden, tiempoArr):
         try:
             # Convertir entradas a los tipos adecuados
             profundidad_value = float(profundidad.value)
             tipo_npt_value = tipoNPT.value
             tiempo_iden_value = float(tiempoIden.value)
             solucion_value = solucion.value
-            tiempo_arr_value = float(tiempoArr.value)
 
-            # Supongamos que `modelo_rf` es una instancia de RandomForestModel
-            tiempo_estimado = modelo_rf.predecir_tiempo(profundidad_value, tipo_npt_value, tiempo_iden_value,
-                                                        solucion_value)
-            t.value = f"Tiempo estimado de arreglo: {tiempo_estimado:.2f} minutos"
+            # Llamar a la predicción
+            tiempo_estimado = modelo_rf.predecir_tiempo(profundidad_value, tipo_npt_value, tiempo_iden_value, solucion_value)
+
+            # Obtener métricas de evaluación del modelo
+            métricas = modelo_rf.obtener_métricas()
+
+            # Actualizar el texto en la vista de "Solución"
+            solucion_text.value = (
+                f"Tiempo estimado de arreglo: {tiempo_estimado:.2f} minutos\n"
+                f"R² del modelo: {métricas['R2']:.2f}\n"
+                f"MAE: {métricas['MAE']:.2f} horas\n"
+                f"RMSE: {métricas['RMSE']:.2f} horas"
+            )
+
+            # Cambiar automáticamente a la vista de "Solución" para mostrar el resultado
+            change_view(1)
+
         except ValueError as ve:
-            t.value = f"Error en los datos ingresados: {ve}"
+            solucion_text.value = f"Error en los datos ingresados: {ve}"
+            change_view(1)
         except Exception as e:
-            t.value = f"Ocurrió un error: {e}"
+            solucion_text.value = f"Ocurrió un error: {e}"
+            change_view(1)
+
         page.update()
 
     # Agregar el contenedor de vistas a la página
     page.add(view_container)
-
 
 ft.app(main)
