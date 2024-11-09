@@ -1,8 +1,6 @@
 import flet as ft
-from forest import RandomForestModel  # Importa la clase que creaste
 
-# Cargar el modelo (puedes hacerlo en el inicio de la aplicación para que esté listo cuando el usuario haga clic)
-modelo_rf = RandomForestModel("UAS_COMPLETO.csv")  # Ruta de tu archivo CSV
+
 def main(page: ft.Page):
     # Configuración de la página
     page.title = "Random Forest"

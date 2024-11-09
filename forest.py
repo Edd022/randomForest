@@ -1,71 +1,93 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.preprocessing import OneHotEncoder
 import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import StandardScaler
 
-class RandomForestModel:
-    def __init__(self, file_path):
-        # Cargar y preprocesar los datos
-        self.data = pd.read_csv(file_path, delimiter=';', on_bad_lines='skip')
-        self.data = self.data.dropna(subset=['GAP (hr)'])
-        self.data['TIEMPO PLANEADO (hr)'] = self.data['TIEMPO PLANEADO (hr)'].fillna(self.data['TIEMPO PLANEADO (hr)'].mean())
-        self.data['TIEMPO EJECUTADO (hr)'] = self.data['TIEMPO EJECUTADO (hr)'].fillna(self.data['TIEMPO EJECUTADO (hr)'].mean())
+class ModeloRF:
+    def __init__(self, data_path):
+        # Leer el archivo CSV actualizado
+        df = pd.read_csv(data_path, delimiter=';', encoding='utf-8', on_bad_lines='skip')
 
-        # Codificar la columna categórica "OPERACIÓN"
-        encoder = OneHotEncoder()
-        operacion_encoded = encoder.fit_transform(self.data[['OPERACIÓN']]).toarray()
-        operacion_df = pd.DataFrame(operacion_encoded, columns=encoder.get_feature_names_out(['OPERACIÓN']))
+        # Seleccionar solo columnas numéricas y eliminar filas con valores faltantes
+        numerical_df = df.select_dtypes(include=[np.number]).dropna()
 
-        # Combinar datos
-        self.features = pd.concat([self.data[['Diámetro Hueco (in)', 'TIEMPO PLANEADO (hr)', 'TIEMPO EJECUTADO (hr)']], operacion_df], axis=1)
-        self.features = self.features.dropna().reset_index(drop=True)
-        self.target = self.data['GAP (hr)'].reset_index(drop=True)
+        # Definir la variable objetivo (target) y las características (features)
+        X = numerical_df.drop(columns=['TIEMPO EJECUTADO (hr)'], errors='ignore')
+        y = numerical_df['TIEMPO EJECUTADO (hr)']
 
-        # Ajuste para tener el mismo tamaño
-        min_length = min(len(self.features), len(self.target))
-        self.features = self.features.iloc[:min_length]
-        self.target = self.target.iloc[:min_length]
+        # Dividir los datos en conjunto de entrenamiento y prueba
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Dividir en entrenamiento y prueba
-        X_train, X_test, y_train, y_test = train_test_split(self.features, self.target, test_size=0.2, random_state=42)
+        # Escalar las características para un mejor rendimiento
+        self.scaler = StandardScaler()
+        X_train_scaled = self.scaler.fit_transform(X_train)
+        X_test_scaled = self.scaler.transform(X_test)
 
-        # Entrenar el modelo
+        # Inicializar y entrenar el modelo de Random Forest
         self.model = RandomForestRegressor(n_estimators=100, random_state=42)
-        self.model.fit(X_train, y_train)
+        self.model.fit(X_train_scaled, y_train)
 
-        # Calcular las métricas de evaluación en el conjunto de prueba
-        y_pred = self.model.predict(X_test)
-        self.mse = mean_squared_error(y_test, y_pred)
-        self.rmse = np.sqrt(self.mse)
-        self.mae = mean_absolute_error(y_test, y_pred)
-        self.r2 = r2_score(y_test, y_pred)
+        # Realizar predicciones para calcular las métricas de rendimiento
+        y_pred = self.model.predict(X_test_scaled)
+        self.metrica_mse = mean_squared_error(y_test, y_pred)
+        self.metrica_mae = mean_absolute_error(y_test, y_pred)
+        self.metrica_r2 = r2_score(y_test, y_pred)
+        self.metrica_rmse = np.sqrt(self.metrica_mse)
+
+        # Guardar nombres de columnas para usar en predicciones
+        self.feature_columns = X.columns
+
+    def predecir_tiempo(self, profundidad, tiempo_iden):
+        # Crear un DataFrame con las columnas necesarias para la predicción, con valores predeterminados
+        entrada = pd.DataFrame([[profundidad, tiempo_iden]], columns=self.feature_columns[:2])
+
+        # Asegurar que todas las columnas estén presentes, usando un valor predeterminado si falta alguna
+        for col in self.feature_columns:
+            if col not in entrada.columns:
+                entrada[col] = 0  # O usa otro valor predeterminado si es necesario
+
+        # Reordenar las columnas para coincidir con el orden original
+        entrada = entrada[self.feature_columns]
+
+        # Escalar la entrada
+        entrada_scaled = self.scaler.transform(entrada)
+
+        # Realizar la predicción
+        prediccion = self.model.predict(entrada_scaled)
+        return prediccion[0]
 
     def obtener_métricas(self):
-        # Retornar las métricas en un formato legible
         return {
-            'R2': self.r2,
-            'MAE': self.mae,
-            'RMSE': self.rmse
+            "MSE": self.metrica_mse,
+            "MAE": self.metrica_mae,
+            "R2": self.metrica_r2,
+            "RMSE": self.metrica_rmse
         }
 
-    def predecir_tiempo(self, profundidad, tipo_npt, tiempo_iden, solucion):
-        # Realizar el mismo preprocesamiento para la entrada
-        input_data = pd.DataFrame({
-            'Diámetro Hueco (in)': [profundidad],
-            'TIEMPO PLANEADO (hr)': [tiempo_iden],
-            'TIEMPO EJECUTADO (hr)': [0],  # Valor arbitrario si necesario
-        })
+# Ruta al archivo actualizado
+file_path = 'UAS_COMPLETO.csv'
 
-        # Codificación de la operación (solución)
-        operacion_encoded = np.zeros(len(self.features.columns) - 3)  # Inicializar el vector de operaciones
-        if f'OPERACIÓN_{solucion}' in self.features.columns:
-            operacion_encoded[self.features.columns.get_loc(f'OPERACIÓN_{solucion}') - 3] = 1  # Ajuste del índice
+# Inicializar y entrenar el modelo
+modelo_rf = ModeloRF(file_path)
 
-        # Concatenar características
-        input_data = pd.concat([input_data, pd.DataFrame([operacion_encoded], columns=self.features.columns[3:])], axis=1)
+# Obtener métricas y mostrar
+métricas = modelo_rf.obtener_métricas()
+print(f"Error Cuadrático Medio (MSE): {métricas['MSE']}")
+print(f"Error Absoluto Medio (MAE): {métricas['MAE']}")
+print(f"Coeficiente de Determinación (R²): {métricas['R2']}")
+print(f"Raíz del Error Cuadrático Medio (RMSE): {métricas['RMSE']}")
 
-        # Predicción
-        pred = self.model.predict(input_data)
-        return pred[0]  # Retorna el valor predicho
+# Ejemplo de predicción y conversión a formato estándar
+profundidad = 10.0  # Valor de ejemplo para 'DIAMETRO DEL HUECO (in)'
+tiempo_iden = 2.0   # Valor de ejemplo para 'TIEMPO PLANEADO (hr)'
+tiempo_estimado = modelo_rf.predecir_tiempo(profundidad, tiempo_iden)
+
+# Convertir el tiempo a horas y minutos
+horas = int(tiempo_estimado)
+minutos = int((tiempo_estimado - horas) * 60)
+
+# Mostrar el tiempo en formato estándar
+print(f"Tiempo estimado de arreglo: {horas} horas y {minutos} minutos")
+
