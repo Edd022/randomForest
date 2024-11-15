@@ -90,4 +90,3 @@ minutos = int((tiempo_estimado - horas) * 60)
 
 # Mostrar el tiempo en formato estándar
 print(f"Tiempo estimado de arreglo: {horas} horas y {minutos} minutos")
-

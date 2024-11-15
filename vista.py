@@ -1,6 +1,7 @@
 import flet as ft
 
 import forest as RF
+import pasolucion as ps
 
 def main(page: ft.Page):
     # Configuración de la página
@@ -61,6 +62,9 @@ def main(page: ft.Page):
             # Llamar a la predicción
             tiempo_estimado = RF.modelo_rf.predecir_tiempo(profundidad_value, tiempo_iden_value)
 
+            #Predecir operación o solución
+            operacion_predicha = ps.predecir_operacion(paso_value)
+
             # Obtener métricas de evaluación del modelo
             métricas = RF.modelo_rf.obtener_métricas()
             horas = int(tiempo_estimado)
@@ -71,9 +75,9 @@ def main(page: ft.Page):
                 f"MSE: {métricas['MSE']:.2f} minutos\n"
                 f"MAE del modelo: {métricas['MAE']:.2f}\n"
                 f"R²: {métricas['R2']:.2f} \n"
-                f"RMSE: {métricas['RMSE']:.2f} horas"
-                f"Tiempo estimado de arreglo: {horas} hora(s) y {minutos} minutos"
-            )
+                f"RMSE: {métricas['RMSE']:.2f} horas\n"
+                f"Tiempo estimado de arreglo: {horas} hora(s) y {minutos} minutos\n"
+                f"Solución: La solución al paso {paso.value} es {operacion_predicha} "            )
 
             # Cambiar automáticamente a la vista de "Solución" para mostrar el resultado
             change_view(1)
